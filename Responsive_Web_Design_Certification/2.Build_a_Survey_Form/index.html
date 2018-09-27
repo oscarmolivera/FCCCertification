@@ -6,51 +6,64 @@
     <title>fCC - Build a Survey Form</title>
   </head>
   <body>
-    <header>
-      <h1 id="title">Cryptocurrencies Investment Survey Form.</h1>
-      <h3>
-        <p id="description">
-          Porfavor complete este formulario y nosotros le contactaremos para recomendarle la mejor inversion segun su caso.
-        </p>
-      </h3>
-    </header>
-    <main>
-      <form id="survey-form" class="" action="index.html" method="post">
-        <label id="name-label" for="name">Nombre: </label>
-        <input id="name" type="text" name="name" value="" placeholder="Porfavor ingrese su nombre completo." required>
-        <label id="email-label" for="email">Correo: </label>
-        <input id="email" type="email" name="email" value="" placeholder="Porfavor ingrese su correo electrónico." required>
-        <label id="number-label" for="number">Monto a Invetir VES.: </label>
-        <input id="number" type="number" name="investment_amount" value="" placeholder="Porfavor ingrese N° de Hijos" min="1" max="500000000"required>
-        <label id="income-label" for="income">Ingreso Anual: </label>
-        <select id="dropdown" class="" name="">
-          <option value="0">--Ingrese un monto anual estimado --</option>
-          <option value="1">Menor al salario mínimo anual.</option>
-          <option value="2">Igual al salario minimo anual.</option>
-          <option value="3">2 veces mas del salario mínimo anual.</option>
-          <option value="4">Entre 3 y 5 salarios minimos anuales.</option>
-          <option value="5">Superior a 6 salarios minimos anulales.</option>
-        </select>
-        <label for="rd_opt_1">Rd1</label>
-        <input type="radio" name="rda" value="0">
-        <label for="rd_opt_2">Rd2</label>
-        <input type="radio" name="rda" value="0">
-        <label for="rd_opt_3">Rd3</label>
-        <input type="radio" name="rda" value="0">
-        <label for="ck_opt_1">Chk1</label>
-        <input type="checkbox" name="ckbx1" value="1">
-        <label for="ck_opt_2">Chk2</label>
-        <input type="checkbox" name="ckbx2" value="2">
-        <label for="ck_opt_3">Chk3</label>
-        <input type="checkbox" name="ckbx3" value="3">
-        <label for="text_area">Comentarios: </label>
-        <textarea name="text_area" rows="8" cols="80"></textarea>
+    <div class="container">
+      <div class="header">
+      <header>
+        <small>freeCodeCamp Challenge</small>
+        <h1 id="title">Etherium Investment Survey Form.</h1>
+        <div class="hdesc">
+          <h3>
+            <p id="description">
+              Porfavor complete este formulario y nosotros le contactaremos para recomendarle la mejor inversion segun su caso.
+            </p>
+          </h3>
+        </div>
+      </header>
+    </div>
+    <div class="main">
+      <main>
+        <form id="survey-form" class="" action="index.html" method="post">
+          <label id="name-label" for="name">Nombre: </label>
+          <input id="name" type="text" name="name" value="" placeholder="Porfavor ingrese su nombre completo." required>
+          <label id="email-label" for="email">Correo: </label>
+          <input id="email" type="email" name="email" value="" placeholder="Porfavor ingrese su correo electrónico." required>
+          <label id="number-label" for="number">Monto a Invetir VES.: </label>
+          <input id="number" type="number" name="investment_amount" value="" placeholder="Porfavor ingrese monto a invertir" min="1" max="500000000"required>
+          <label id="income-label" for="income">Ingreso Anual: </label>
+          <select id="dropdown" class="" name="">
+            <option value="0">--Ingrese un monto anual estimado --</option>
+            <option value="1">Menor al salario mínimo anual.</option>
+            <option value="2">Igual al salario minimo anual.</option>
+            <option value="3">2 veces mas del salario mínimo anual.</option>
+            <option value="4">Entre 3 y 5 salarios minimos anuales.</option>
+            <option value="5">Superior a 6 salarios minimos anulales.</option>
+          </select>
+          <label for="rd_opt_1">Rd1</label>
+          <input type="radio" name="rda" value="0">
+          <label for="rd_opt_2">Rd2</label>
+          <input type="radio" name="rda" value="0">
+          <label for="rd_opt_3">Rd3</label>
+          <input type="radio" name="rda" value="0">
+          <label for="ck_opt_1">Chk1</label>
+          <input type="checkbox" name="ckbx1" value="1">
+          <label for="ck_opt_2">Chk2</label>
+          <input type="checkbox" name="ckbx2" value="2">
+          <label for="ck_opt_3">Chk3</label>
+          <input type="checkbox" name="ckbx3" value="3">
+          <label for="text_area">Comentarios: </label>
+          <textarea name="text_area" rows="8" cols="80"></textarea>
 
-        <input id="submit" type="submit" name="form-btn" value="Enviar">
-      </form>
-    </main>
-    <footer>
+          <input id="submit" type="submit" name="form-btn" value="Enviar">
+          <input type="reset" name="reset-btn" value="Reset Info">
 
-    </footer>
+        </form>
+      </main>
+    </div>
+    <div class="footer">
+      <footer>
+        idea
+      </footer>
+    </div>
+  </div>
   </body>
 </html>

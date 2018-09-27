@@ -1,3 +1,28 @@
-html, body{
-  background: url("");
+html{
+  background-image: url("../img/image4280.png");
+}
+.container{
+  background-color: white;
+  border-radius: 15px;
+  width: 1500px;
+  margin: auto;
+}
+.header{
+  background-color: rgba(33,68,120, 255);
+  font-size: 1.5em;
+  border-radius: 15px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2 500px);
+}
+.hdesc{
+  color: white;
+/*background-color: white;*/
+}
+.main{
+  background-color: white;
+  text-align: center;
+}
+.footer{
+  background-color: red;
 }
