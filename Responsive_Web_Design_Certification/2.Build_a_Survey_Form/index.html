@@ -1,69 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <title>fCC - Build a Survey Form</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-      <header>
-        <small>freeCodeCamp Challenge</small>
-        <h1 id="title">Etherium Investment Survey Form.</h1>
-        <div class="hdesc">
-          <h3>
-            <p id="description">
-              Porfavor complete este formulario y nosotros le contactaremos para recomendarle la mejor inversion segun su caso.
-            </p>
-          </h3>
-        </div>
-      </header>
-    </div>
-    <div class="main">
-      <main>
-        <form id="survey-form" class="" action="index.html" method="post">
-          <label id="name-label" for="name">Nombre: </label>
-          <input id="name" type="text" name="name" value="" placeholder="Porfavor ingrese su nombre completo." required>
-          <label id="email-label" for="email">Correo: </label>
-          <input id="email" type="email" name="email" value="" placeholder="Porfavor ingrese su correo electrónico." required>
-          <label id="number-label" for="number">Monto a Invetir VES.: </label>
-          <input id="number" type="number" name="investment_amount" value="" placeholder="Porfavor ingrese monto a invertir" min="1" max="500000000"required>
-          <label id="income-label" for="income">Ingreso Anual: </label>
-          <select id="dropdown" class="" name="">
-            <option value="0">--Ingrese un monto anual estimado --</option>
-            <option value="1">Menor al salario mínimo anual.</option>
-            <option value="2">Igual al salario minimo anual.</option>
-            <option value="3">2 veces mas del salario mínimo anual.</option>
-            <option value="4">Entre 3 y 5 salarios minimos anuales.</option>
-            <option value="5">Superior a 6 salarios minimos anulales.</option>
-          </select>
-          <label for="rd_opt_1">Rd1</label>
-          <input type="radio" name="rda" value="0">
-          <label for="rd_opt_2">Rd2</label>
-          <input type="radio" name="rda" value="0">
-          <label for="rd_opt_3">Rd3</label>
-          <input type="radio" name="rda" value="0">
-          <label for="ck_opt_1">Chk1</label>
-          <input type="checkbox" name="ckbx1" value="1">
-          <label for="ck_opt_2">Chk2</label>
-          <input type="checkbox" name="ckbx2" value="2">
-          <label for="ck_opt_3">Chk3</label>
-          <input type="checkbox" name="ckbx3" value="3">
-          <label for="text_area">Comentarios: </label>
-          <textarea name="text_area" rows="8" cols="80"></textarea>
-
-          <input id="submit" type="submit" name="form-btn" value="Enviar">
-          <input type="reset" name="reset-btn" value="Reset Info">
-
-        </form>
-      </main>
-    </div>
-    <div class="footer">
-      <footer>
-        idea
-      </footer>
-    </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>fCC - Build a Survey Form<</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <small><span>freeCodeCamp</span> | <span>Responsive Web Design</span> | <span>Project</span></small>
+      <h1 id="title"><span>ETHEREUM </span> INVESTMENTS</h1>
+    </header>
+    <main>
+      <div class="description">
+        <h2>SURVEY FORM</h2>
+        <p id="description">Please fill out this form so we can help you in your future Ether Investments.</p>
+      </div>
+      <form id="survey-form" action="#" method="post">
+        <div><h3><label id="name-label" for="name">Name:</label></h3></div>
+      <div><input id="name" type="text" name="name" value="" placeholder="Your name here." required></div>
+      <div><h3><label id="email-label" for="email">Email: </label></h3></div>
+      <div><input id="email" type="email" name="email" value="" placeholder="Your email address here" required></div>
+      <div><h3><label id="number-label" for="number">Monthly Investment Amount: </label></h3></div>
+      <div class="div-number">
+        <div class="inp-number"><input id="number" type="number" name="investment_amount" value="" placeholder="How much are you willing to invest?" min="1" max="500000000"required></div>
+        <div class="tex-number"><h3>USD Dollars.</h3></div>
+      </div>
+      <div><h3><label id="income-label" for="income">Preferred Investment Portfolio: </label></h3></div>
+      <div>
+        <select id="dropdown" class="" name="">
+          <option value="0">--Please choose one of these--</option>
+          <option value="1">Minnig Equipment.</option>
+          <option value="2">Day Tradding.</option>
+          <option value="3">Exchange Crypto Assets.</option>
+          <option value="4">Smart Contracts Applications.</option>
+          <option value="5">FinTech Venture Capital.</option>
+        </select>
+      </div>
+      <div class="rd-label">
+        <h3><label>Place of Residence:</label></h3>
+        <p>Please choose where do you have your legal residence.</p>
+      </div>
+      <div class="rd-btns">
+        <p>NorthAmerica: </p><input type="radio" name="rda" value="0">
+        <p>SudAmerica: </p><input type="radio" name="rda" value="1">
+        <p>Europe: </p><input type="radio" name="rda" value="2">
+        <p>Africa: </p><input type="radio" name="rda" value="3">
+        <p>Asia: </p><input type="radio" name="rda" value="4">
+        <p>China or Japan: </p><input type="radio" name="rda" value="5">
+        <p>Australia: </p><input type="radio" name="rda" value="6">
+        <p>Other: </p><input type="radio" name="rda" value="7">
+      </div>
+      <div class="cb-label">
+        <h3><label>Preferred Crypto Token to Invest:</label></h3>
+        <p>Please choose anyone you like:</p>
+      </div>
+      <div class="cb-opns">
+        <p>Bitcoin:</p>      <input type="checkbox" name="ckbx1" value="1">
+        <p>Bitcoin Cash:</p> <input type="checkbox" name="ckbx2" value="2">
+        <p>Ether:</p>        <input type="checkbox" name="ckbx3" value="3">
+        <p>Ether Classic:</p><input type="checkbox" name="ckbx4" value="4">
+        <p>Ripple: </p>      <input type="checkbox" name="ckbx5" value="5">
+        <p>Dash: </p>        <input type="checkbox" name="ckbx6" value="6">
+        <p>Dogecoin: </p>    <input type="checkbox" name="ckbx7" value="7">
+        <p>Other: </p>       <input type="checkbox" name="ckbx8" value="8">
+      </div>
+      <div><h3><label for="text_area">Comments: </label></h3></div>
+      <div><textarea name="text_area" rows="5"></textarea></div>
+      <div><input id="submit" type="submit" name="form-btn" value="Enviar"></div>
+      <div><input type="reset" name="reset-btn" value="Reset Info"></div>
+      </form>
+    </main>
+    <footer>
+      idea
+    </footer>
   </div>
-  </body>
+</body>
 </html>
