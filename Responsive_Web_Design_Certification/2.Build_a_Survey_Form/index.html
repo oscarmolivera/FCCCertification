@@ -39,42 +39,71 @@
           <option value="5">FinTech Venture Capital.</option>
         </select>
       </div>
-      <div class="rd-label">
-        <h3><label>Place of Residence:</label></h3>
-        <p>Please choose where do you have your legal residence.</p>
+      <div class="radio">
+        <fieldset>
+          <legend><h3>Residence</h3></legend>
+          <p>Please choose where do you have your legal residence:</p>
+          <input type="radio" name="region" id="nam" value="0">
+          <label for="nam">NorthAmerica</label>
+          <input type="radio" name="region" id="sam" value="1">
+          <label for="sam">SouthAmerica</label>
+          <input type="radio" name="region" id="eur" value="2">
+          <label for="eur">Europe</label>
+          <input type="radio" name="region" id="afr" value="3">
+          <label for="afr">Africa</label>
+          <input type="radio" name="region" id="asi" value="4">
+          <label for="asi">Asia</label>
+          <input type="radio" name="region" id="aus" value="5">
+          <label for="aus">Australia</label>
+        </fieldset>
       </div>
-      <div class="rd-btns">
-        <p>NorthAmerica: </p><input type="radio" name="rda" value="0">
-        <p>SudAmerica: </p><input type="radio" name="rda" value="1">
-        <p>Europe: </p><input type="radio" name="rda" value="2">
-        <p>Africa: </p><input type="radio" name="rda" value="3">
-        <p>Asia: </p><input type="radio" name="rda" value="4">
-        <p>China or Japan: </p><input type="radio" name="rda" value="5">
-        <p>Australia: </p><input type="radio" name="rda" value="6">
-        <p>Other: </p><input type="radio" name="rda" value="7">
+      <div class="checkbox">
+        <fieldset>
+          <legend><h3>Cryptocurrencies</h3></legend>
+          <p>How many crypto tokens do you know?</p>
+          <input type="checkbox" name="cb1" id="btc" value="0">
+          <label for="btc">Bitcoin</label>
+          <input type="checkbox" name="cb2" id="bch" value="1">
+          <label for="bch">Bitcoin Cash</label>
+          <input type="checkbox" name="cb3" id="eth" value="2">
+          <label for="eth">Ethereum</label>
+          <input type="checkbox" name="cb4" id="xrp" value="3">
+          <label for="xrp">Ripple</label>
+          <input type="checkbox" name="cb5" id="eos" value="4">
+          <label for="eos">EOS</label>
+          <input type="checkbox" name="cb6" id="xlm" value="5">
+          <label for="xlm">Stellar</label>
+          <input type="checkbox" name="cb7" id="usdt" value="6">
+          <label for="usdt">Tether</label>
+          <input type="checkbox" name="cb8" id="ada" value="7">
+          <label for="ada">Cardano</label>
+          <input type="checkbox" name="cb9" id="ltc" value="8">
+          <label for="ltc">Litecoin</label>
+          <input type="checkbox" name="cb10" id="xmr" value="9">
+          <label for="xmr">Monero</label>
+        </fieldset>
       </div>
-      <div class="cb-label">
-        <h3><label>Preferred Crypto Token to Invest:</label></h3>
-        <p>Please choose anyone you like:</p>
+      <div class="comments">
+        <label for="text_area"><h3>Leave a Comment</h3></label>
+        <textarea name="text_area" rows="5" placeholder="Feel free to ask us anything:"></textarea>
       </div>
-      <div class="cb-opns">
-        <p>Bitcoin:</p>      <input type="checkbox" name="ckbx1" value="1">
-        <p>Bitcoin Cash:</p> <input type="checkbox" name="ckbx2" value="2">
-        <p>Ether:</p>        <input type="checkbox" name="ckbx3" value="3">
-        <p>Ether Classic:</p><input type="checkbox" name="ckbx4" value="4">
-        <p>Ripple: </p>      <input type="checkbox" name="ckbx5" value="5">
-        <p>Dash: </p>        <input type="checkbox" name="ckbx6" value="6">
-        <p>Dogecoin: </p>    <input type="checkbox" name="ckbx7" value="7">
-        <p>Other: </p>       <input type="checkbox" name="ckbx8" value="8">
+      <div class="btn">
+          <input id="submit" type="submit" name="form-btn" value="Submit">
+          <p><input type="reset" name="reset-btn" value="Reset form"></p>
       </div>
-      <div><h3><label for="text_area">Comments: </label></h3></div>
-      <div><textarea name="text_area" rows="5"></textarea></div>
-      <div><input id="submit" type="submit" name="form-btn" value="Enviar"></div>
-      <div><input type="reset" name="reset-btn" value="Reset Info"></div>
       </form>
     </main>
     <footer>
-      idea
+      <div class="contact">
+        <p>For more information:</p>
+        <ul>
+          <li><a href="#" placeholder="telephone number">Phone</a></li>
+          <li>|</li>
+          <li><a href="#" placeholder="email address">Email</a></li>
+          <li>|</li>
+          <li><a href="#" placeholder="home web page">Home</a></li>
+        </ul>
+      </div>
     </footer>
   </div>
 </body>

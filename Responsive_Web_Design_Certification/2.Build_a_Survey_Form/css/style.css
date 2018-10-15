@@ -1,12 +1,17 @@
-:root{
+|:root{
   --bordeR: dashed red 0.9px;
   --bordeV: dotted green 0.9px;
   --bordeA: solid blue 0.9px;
   /* border: var(--bordeA);*/
 }
-
+/*MOBILE FIRST STYLE*/
 *{
   box-sizing: border-box;
+  -webkit-width: border-box;
+  -moz-width: border-box;
+  -ms-width: border-box;
+  -o-width: border-box;
+  width: border-box;
 }
 body{
   background: url('../img/image4270.png');
@@ -20,7 +25,6 @@ body{
   margin-left:auto;
   margin-right: auto;
   padding: 0.5em;
-
   background-color: #B1BADF;
 }
 header{
@@ -58,7 +62,7 @@ form{
   margin: 0px;
 }
 form > div{
-  margin: 5px 10px 0px 10px;
+  margin: 5px 10px 5px 10px;
 }
 form > div >input, form > div >select{
   font-size: 1.1em;
@@ -70,24 +74,108 @@ margin: auto;
 }
 .div-number{
   display: flex;
-
+  align-items: flex-end;
 }
 .inp-number{
 width: 70%;
 }
 .tex-number{
-  margin-left: auto;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 #number{
   font-size: 1.1em;
   width: 100%;
   margin-right: auto;
   padding: 10px;
+  text-align: right;
+  margin-right: 15px;
 }
-.rd-label > p, .cb-label > p{
-  margin-top: 5px;
+
+.radio input[type=radio],
+.checkbox input[type=checkbox]{
+  display: none;
 }
-.rd-btns, .cb-opns{
+.radio label,
+.checkbox label{
+  color: #251150;
+  background-color: rgba(224,218,232, 0.1);
+  padding: 5px 15px 5px 28px;
+  display: inline-block;
+  position:relative;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.radio label:hover,
+.checkbox label:hover{
+  background-color: rgba(224,218,242, 0.3);
+  border-radius: 10px;
+}
+.radio label::before,
+.checkbox label::before{
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-color: none;
+  border: solid 2px #A49DAD;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  top: 4px;
+
+}
+.checkbox label::before{
+  border-radius: 3px;
+}
+.radio input[type=radio]:checked + label,
+.checkbox input[type=checkbox]:checked + label{
+  padding: 5px 15px;
+  background-color: rgba(224,218,242, 0.8);
+  border-radius: 5px;
+}
+.radio input[type=radio]:checked + label::before,
+.checkbox input[type=checkbox]:checked + label::before{
+  display: none;
+}
+.comments textarea{
+  font-size: 1.3em;
+  width: 100%;
+  border: solid #999 2px;
+}
+.btn input{
+ color: #FFF;
+ background-color: #B1BADF;
+ border: 1px;
+ text-transform: uppercase;
+}
+
+.btn input:hover, .btn input:focus{
+  background-color: #E0DAE8;
+  color: #55525C;
+  transition: background-color 0.4s ease-out;
+}
+.contact{
+  background-color: #E0DAE8;
+  text-align: center;
+  padding: 0.5em;
+  box-shadow: 0px 5px 8px rgba(72, 94, 116, 0.7);
+
+  border-bottom-left-radius:  15px;
+  border-bottom-right-radius: 15px;
+
+}
+
+.contact ul{
+  list-style: none;
   display: flex;
-  flex-direction: row;
+  justify-content: ce5ter;
+  padding-left: 0px;
+  padding-right: 10px;
 }
+.contact ul, .contact p{
+  margin: 0px;
+  color: #aaa;
+}
+@media
