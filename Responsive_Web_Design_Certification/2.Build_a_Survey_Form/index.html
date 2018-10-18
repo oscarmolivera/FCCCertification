@@ -10,35 +10,42 @@
 <body>
   <div class="container">
     <header>
-      <small><span>freeCodeCamp</span> | <span>Responsive Web Design</span> | <span>Project</span></small>
-      <h1 id="title"><span>ETHEREUM </span> INVESTMENTS</h1>
+      <small><span><a href="https://www.freecodecamp.org/" class="top"><small>freeCodeCamp</a></span> |
+             <span><a href="https://learn.freecodecamp.org/" class="top">Responsive Web Design</a></span> |
+             <span><a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form" class="top">Project</small></a></span></small>
+      <h1 id="title">ETHEREUM INVESTMENTS</h1>
     </header>
     <main>
-      <div class="description">
+      <div class="marker">
         <h2>SURVEY FORM</h2>
         <p id="description">Please fill out this form so we can help you in your future Ether Investments.</p>
       </div>
       <form id="survey-form" action="#" method="post">
-        <div><h3><label id="name-label" for="name">Name:</label></h3></div>
-      <div><input id="name" type="text" name="name" value="" placeholder="Your name here." required></div>
-      <div><h3><label id="email-label" for="email">Email: </label></h3></div>
-      <div><input id="email" type="email" name="email" value="" placeholder="Your email address here" required></div>
-      <div><h3><label id="number-label" for="number">Monthly Investment Amount: </label></h3></div>
-      <div class="div-number">
-        <div class="inp-number"><input id="number" type="number" name="investment_amount" value="" placeholder="How much are you willing to invest?" min="1" max="500000000"required></div>
-        <div class="tex-number"><h3>USD Dollars.</h3></div>
-      </div>
-      <div><h3><label id="income-label" for="income">Preferred Investment Portfolio: </label></h3></div>
-      <div>
-        <select id="dropdown" class="" name="">
-          <option value="0">--Please choose one of these--</option>
-          <option value="1">Minnig Equipment.</option>
-          <option value="2">Day Tradding.</option>
-          <option value="3">Exchange Crypto Assets.</option>
-          <option value="4">Smart Contracts Applications.</option>
-          <option value="5">FinTech Venture Capital.</option>
-        </select>
-      </div>
+        <div class="row">
+          <div><h3><label id="name-label" for="name">Name:</label></h3></div>
+          <div><input id="name" type="text" name="name" value="" placeholder="Your name here." required></div>
+          <div><h3><label id="email-label" for="email">Email: </label></h3></div>
+          <div><input id="email" type="email" name="email" value="" placeholder="Your email address here" required></div>
+        </div>
+        <div class="row">
+          <div><h3><label id="number-label" for="number">Monthly Investment Amount: </label></h3></div>
+          <div class="div-number">
+            <div class="inp-number"><input id="number" type="number" name="investment_amount" value="" placeholder="How much are you willing to invest?" min="1" max="500000000"required></div>
+            <div class="tex-number"><h3>USD Dollars.</h3></div>
+          </div>
+          <div><h3><label id="income-label" for="income">Preferred Investment Portfolio: </label></h3></div>
+          <div>
+            <select id="dropdown" class="" name="">
+              <option value="0">--Please choose one of these--</option>
+              <option value="1">Minnig Equipment.</option>
+              <option value="2">Day Tradding.</option>
+              <option value="3">Exchange Crypto Assets.</option>
+              <option value="4">Smart Contracts Applications.</option>
+              <option value="5">FinTech Venture Capital.</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
       <div class="radio">
         <fieldset>
           <legend><h3>Residence</h3></legend>
@@ -83,27 +90,29 @@
           <label for="xmr">Monero</label>
         </fieldset>
       </div>
+      </div>
       <div class="comments">
         <label for="text_area"><h3>Leave a Comment</h3></label>
-        <textarea name="text_area" rows="5" placeholder="Feel free to ask us anything:"></textarea>
+        <textarea id="text_area" rows="5" placeholder="Feel free to ask us anything:"></textarea>
       </div>
       <div class="btn">
           <input id="submit" type="submit" name="form-btn" value="Submit">
           <p><input type="reset" name="reset-btn" value="Reset form"></p>
       </div>
       </form>
-    </main>
-    <footer>
       <div class="contact">
         <p>For more information:</p>
         <ul>
-          <li><a href="#" placeholder="telephone number">Phone</a></li>
+          <li><a href="tel:+56948888888" placeholder="telephone number"><small>Phone</small></a></li>
           <li>|</li>
-          <li><a href="#" placeholder="email address">Email</a></li>
+          <li><a href="#" placeholder="email address"><small>Email</small></a></li>
           <li>|</li>
-          <li><a href="#" placeholder="home web page">Home</a></li>
+          <li><a href="#" placeholder="home web page"><small>Home</small></a></li>
         </ul>
       </div>
+    </main>
+    <footer>
+
     </footer>
   </div>
 </body>

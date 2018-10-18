@@ -1,10 +1,10 @@
-|:root{
-  --bordeR: dashed red 0.9px;
-  --bordeV: dotted green 0.9px;
-  --bordeA: solid blue 0.9px;
-  /* border: var(--bordeA);*/
+/*MOBILE STYLE FIRST*/
+:root{
+  --darker: #001F3F;
+  --lighter: #E0E0E0;
+  --softer: #A9B7C4;
+  --tinter: #DFE8F0;
 }
-/*MOBILE FIRST STYLE*/
 *{
   box-sizing: border-box;
   -webkit-width: border-box;
@@ -12,104 +12,95 @@
   -ms-width: border-box;
   -o-width: border-box;
   width: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 body{
   background: url('../img/image4270.png');
-  line-height: 1em;
+  line-height: 1.1em;
   font-family: Arial, sans-serif;
-  padding: 0.5em;
+  padding: 1em;
 }
-
 .container{
-  max-width: 900px;
   margin-left:auto;
   margin-right: auto;
-  padding: 0.5em;
-  background-color: #B1BADF;
+  background-color: var(--lighter);
+  padding: 0em 0.6em;
 }
 header{
   text-align: center;
+  line-height: 1.7em;
 }
-header span{
-  color:rgba(255, 255, 250, 0.9);
-  line-height: 1.3em;
-
+#title{
+  margin: 10px;
 }
-.description{
+#title, .top{
+  color: var(--darker);
+}
+.marker{
   text-align: center;
   padding: 0.5em;
-
-}
-#description{
-  text-align: justify;
-}
-.description{
-  background-color: #E0DAE8;
+  background-color: var(--softer);
   border-top-left-radius:  15px;
   border-top-right-radius: 15px;
+  text-align: justify;
 }
-form{
-  background-color: #F4F1F7;
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
+h2{
+  text-align: center;
+  color: var(--darker);
 }
 main{
-border-radius: 15px;
+  border-radius: 15px;
   box-shadow: 0 0 20PX 0 rgba(72, 94, 116, 0.7);
 }
 form{
-  margin: 0px;
-}
-form > div{
-  margin: 5px 10px 5px 10px;
-}
-form > div >input, form > div >select{
-  font-size: 1.1em;
-  width: 100%;
+  background-color: var(--tinter);
   padding: 10px;
 }
-h3{
-margin: auto;
+.row{
+  display: flex;
+  flex-direction: column;
+}
+#name, #email, #dropdown, fieldset, #number, #text_area {
+  font-size: 1.1em;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 .div-number{
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: flex-end;
 }
 .inp-number{
-width: 70%;
+  margin-right: auto;
+  flex: 1;
 }
 .tex-number{
   margin-left: 5px;
-  margin-bottom: 5px;
 }
-#number{
-  font-size: 1.1em;
-  width: 100%;
-  margin-right: auto;
-  padding: 10px;
-  text-align: right;
-  margin-right: 15px;
+.radio fieldset p,
+.checkbox fieldset p{
+  font-weight: bold;
 }
-
 .radio input[type=radio],
 .checkbox input[type=checkbox]{
   display: none;
 }
 .radio label,
 .checkbox label{
-  color: #251150;
-  background-color: rgba(224,218,232, 0.1);
+  color: var(--darker);
+  background-color: var(--tinter);
   padding: 5px 15px 5px 28px;
   display: inline-block;
   position:relative;
-  font-size: 1.1em;
+  font-size: 0.9em;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .radio label:hover,
 .checkbox label:hover{
-  background-color: rgba(224,218,242, 0.3);
+  background-color: var(--lighter);
   border-radius: 10px;
 }
 .radio label::before,
@@ -119,7 +110,7 @@ width: 70%;
   height: 12px;
   display: inline-block;
   background-color: none;
-  border: solid 2px #A49DAD;
+  border: solid 2px var(--darker);
   border-radius: 50%;
   position: absolute;
   left: 8px;
@@ -132,50 +123,49 @@ width: 70%;
 .radio input[type=radio]:checked + label,
 .checkbox input[type=checkbox]:checked + label{
   padding: 5px 15px;
-  background-color: rgba(224,218,242, 0.8);
+  background-color: var(--softer);
   border-radius: 5px;
 }
 .radio input[type=radio]:checked + label::before,
 .checkbox input[type=checkbox]:checked + label::before{
   display: none;
 }
-.comments textarea{
-  font-size: 1.3em;
+.comments textarea, #submit{
+  font-size: 1.8em;
   width: 100%;
-  border: solid #999 2px;
+  border: solid var(--softer) 2px;
 }
 .btn input{
- color: #FFF;
- background-color: #B1BADF;
- border: 1px;
+ color: var(--darker);
+ background-color:var(--lighter);
+ border: 0.5px;
  text-transform: uppercase;
 }
 
 .btn input:hover, .btn input:focus{
-  background-color: #E0DAE8;
-  color: #55525C;
+  background-color: var(--softer);
+  color: var(--lighter);
   transition: background-color 0.4s ease-out;
 }
 .contact{
-  background-color: #E0DAE8;
+  background-color: var(--softer);
   text-align: center;
-  padding: 0.5em;
-  box-shadow: 0px 5px 8px rgba(72, 94, 116, 0.7);
-
   border-bottom-left-radius:  15px;
   border-bottom-right-radius: 15px;
-
+  padding: 0.5em;
 }
 
-.contact ul{
-  list-style: none;
-  display: flex;
-  justify-content: ce5ter;
-  padding-left: 0px;
-  padding-right: 10px;
+
+/* STYLE FOR BIGGER SCREENS (700plus)*/
+@media(min-width: 700px){
+
+  .container{
+    max-width: 700px;
+  }
+  .marker{
+    text-align: center;
+  }
+  .row{
+    flex-direction: row;
+  }
 }
-.contact ul, .contact p{
-  margin: 0px;
-  color: #aaa;
-}
-@media
