@@ -1,8 +1,8 @@
 /*MOBILE STYLE FIRST*/
 :root{
-  --darker: #001F3F;
-  --lighter: #E0E0E0;
-  --softer: #A9B7C4;
+  --darker: #29434E/*#001F3F*/;
+  --lighter: #CFCFCF/*E0E0E0*/;
+  --softer: #546e7a/*A9B7C4*/;
   --tinter: #DFE8F0;
 }
 *{
@@ -26,6 +26,7 @@ body{
   margin-right: auto;
   background-color: var(--lighter);
   padding: 0em 0.6em;
+
 }
 header{
   text-align: center;
@@ -47,7 +48,7 @@ header{
 }
 h2{
   text-align: center;
-  color: var(--darker);
+  color: var(--lighter);
 }
 main{
   border-radius: 15px;
@@ -57,11 +58,7 @@ form{
   background-color: var(--tinter);
   padding: 10px;
 }
-.row{
-  display: flex;
-  flex-direction: column;
-}
-#name, #email, #dropdown, fieldset, #number, #text_area {
+#name, #email, #dropdown,fieldset,  #number, #text_area {
   font-size: 1.1em;
   width: 100%;
   padding: 5px;
@@ -79,16 +76,23 @@ form{
 .tex-number{
   margin-left: 5px;
 }
-.radio fieldset p,
-.checkbox fieldset p{
+.row p{
   font-weight: bold;
 }
-.radio input[type=radio],
-.checkbox input[type=checkbox]{
+.rdgroup, .cbgroup{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.rditem, .cbitem{
+  width: 140px;
+}
+.rditem input[type=radio],
+.cbitem input[type=checkbox]{
   display: none;
 }
-.radio label,
-.checkbox label{
+.rditem label,
+.cbitem label{
   color: var(--darker);
   background-color: var(--tinter);
   padding: 5px 15px 5px 28px;
@@ -98,13 +102,14 @@ form{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.radio label:hover,
-.checkbox label:hover{
+.rditem label:hover,
+.cbitem label:hover{
   background-color: var(--lighter);
   border-radius: 10px;
+
 }
-.radio label::before,
-.checkbox label::before{
+.rditem label::before,
+.cbitem label::before{
   content: "";
   width: 12px;
   height: 12px;
@@ -115,19 +120,20 @@ form{
   position: absolute;
   left: 8px;
   top: 4px;
-
 }
-.checkbox label::before{
+.cbitem label::before{
   border-radius: 3px;
 }
-.radio input[type=radio]:checked + label,
-.checkbox input[type=checkbox]:checked + label{
-  padding: 5px 15px;
+.rditem input[type=radio]:checked + label,
+.cbitem input[type=checkbox]:checked + label{
+  padding: 5px 10px;
   background-color: var(--softer);
   border-radius: 5px;
+  border: solid var(--darker) 1.2px;
+  color: var(--lighter);
 }
-.radio input[type=radio]:checked + label::before,
-.checkbox input[type=checkbox]:checked + label::before{
+.rditem input[type=radio]:checked + label::before,
+.cbitem input[type=checkbox]:checked + label::before{
   display: none;
 }
 .comments textarea, #submit{
@@ -154,18 +160,75 @@ form{
   border-bottom-right-radius: 15px;
   padding: 0.5em;
 }
-
-
+.contact ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
+}
+.contact ul, .contact p{
+  margin: 0px;
+  color: var(--lighter);
+}
+header span a, .contact ul a{
+  color: var(--lighter);
+  line-height: 1.3em;
+  text-decoration: none;
+}
+.contact ul a:hover, header span a:hover{
+    color: var(--darker);
+}
+.contact ul a:visited, header span a:visited{
+    color: var(--darker);
+}
+.contact ul a:visited:hover, header span a:visited:hover{
+    color: var(--tinter);
+}
+footer{
+  color: var(--lighter);
+}
 /* STYLE FOR BIGGER SCREENS (700plus)*/
 @media(min-width: 700px){
 
   .container{
-    max-width: 700px;
+    max-width: 750px;
+  }
+  #title{
+    margin-bottom: 15px;
+    font-size: 2.2em;
   }
   .marker{
     text-align: center;
+    font-size: 1em;
+    padding: 20px;
   }
-  .row{
+  .marker p{
+    padding-top: 5px;
+  }
+  .row-A, .row-B{
+    display: flex;
     flex-direction: row;
+    align-items: baseline;
+  }
+  .row-A{
+    justify-content: space-between;
+  }
+  .row-A div{
+    margin: 5px 0px;
+  }
+  .row-B .element1, .row-B .element2 {
+    width: 345px;
+  }
+  .element1{
+    margin-right: auto;
+  }
+  .tex-number {
+    font-size: 12px;
+  }
+  .rditem, .cbitem{
+    width: 180px;
+  }
+  .rdgroup, .cbgroup{
+    justify-content: space-around;
   }
 }

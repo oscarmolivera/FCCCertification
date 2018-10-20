@@ -10,9 +10,9 @@
 <body>
   <div class="container">
     <header>
-      <small><span><a href="https://www.freecodecamp.org/" class="top"><small>freeCodeCamp</a></span> |
-             <span><a href="https://learn.freecodecamp.org/" class="top">Responsive Web Design</a></span> |
-             <span><a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form" class="top">Project</small></a></span></small>
+      <small><span><a target="_blank" href="https://www.freecodecamp.org/" class="top"><small>freeCodeCamp</a></span> |
+             <span><a target="_blank" href="https://learn.freecodecamp.org/" class="top">Responsive Web Design</a></span> |
+             <span><a target="_blank" href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form" class="top">Project</small></a></span></small>
       <h1 id="title">ETHEREUM INVESTMENTS</h1>
     </header>
     <main>
@@ -21,19 +21,22 @@
         <p id="description">Please fill out this form so we can help you in your future Ether Investments.</p>
       </div>
       <form id="survey-form" action="#" method="post">
-        <div class="row">
+        <div class="row-A">
           <div><h3><label id="name-label" for="name">Name:</label></h3></div>
           <div><input id="name" type="text" name="name" value="" placeholder="Your name here." required></div>
           <div><h3><label id="email-label" for="email">Email: </label></h3></div>
           <div><input id="email" type="email" name="email" value="" placeholder="Your email address here" required></div>
         </div>
-        <div class="row">
-          <div><h3><label id="number-label" for="number">Monthly Investment Amount: </label></h3></div>
-          <div class="div-number">
-            <div class="inp-number"><input id="number" type="number" name="investment_amount" value="" placeholder="How much are you willing to invest?" min="1" max="500000000"required></div>
-            <div class="tex-number"><h3>USD Dollars.</h3></div>
+        <div class="row-B">
+          <div class = "element1">
+            <h3><label id="number-label" for="number">Monthly Investment Amount: </label></h3>
+            <div class="div-number">
+              <div class="inp-number"><input id="number" type="number" name="investment_amount" value="" placeholder="How much are you willing to invest?" min="1" max="500000000"required></div>
+              <div class="tex-number"><h3>USD Dollars.</h3></div>
+            </div>
           </div>
-          <div><h3><label id="income-label" for="income">Preferred Investment Portfolio: </label></h3></div>
+          <div class="element2">
+            <h3><label id="income-label" for="income">Preferred Investment Portfolio: </label></h3>
           <div>
             <select id="dropdown" class="" name="">
               <option value="0">--Please choose one of these--</option>
@@ -44,52 +47,81 @@
               <option value="5">FinTech Venture Capital.</option>
             </select>
           </div>
+          </div>
         </div>
-        <div class="row">
-      <div class="radio">
-        <fieldset>
+        <div class="row-C">
+         <fieldset>
           <legend><h3>Residence</h3></legend>
-          <p>Please choose where do you have your legal residence:</p>
-          <input type="radio" name="region" id="nam" value="0">
-          <label for="nam">NorthAmerica</label>
-          <input type="radio" name="region" id="sam" value="1">
-          <label for="sam">SouthAmerica</label>
-          <input type="radio" name="region" id="eur" value="2">
-          <label for="eur">Europe</label>
-          <input type="radio" name="region" id="afr" value="3">
-          <label for="afr">Africa</label>
-          <input type="radio" name="region" id="asi" value="4">
-          <label for="asi">Asia</label>
-          <input type="radio" name="region" id="aus" value="5">
-          <label for="aus">Australia</label>
+          <div><p>Please choose where do you have your legal residence:</p></div>
+          <div class="rdgroup">
+            <div class="rditem">
+              <input type="radio" name="region" id="nam" value="0">
+              <label for="nam">NorthAmerica</label>
+            </div>
+            <div class="rditem">
+              <input type="radio" name="region" id="eur" value="1">
+              <label for="eur">Europe</label>
+            </div>
+            <div class="rditem">
+              <input type="radio" name="region" id="sam" value="2">
+              <label for="sam">SouthAmerica</label>
+            </div>
+            <div class="rditem">
+              <input type="radio" name="region" id="afr" value="3">
+              <label for="afr">Africa</label>
+            </div>
+            <div class="rditem">
+              <input type="radio" name="region" id="asi" value="4">
+              <label for="asi">Asia</label>
+            </div>
+            <div class="rditem">
+              <input type="radio" name="region" id="aus" value="5">
+              <label for="aus">Australia</label>
+            </div>
+          </div>
         </fieldset>
-      </div>
-      <div class="checkbox">
         <fieldset>
           <legend><h3>Cryptocurrencies</h3></legend>
           <p>How many crypto tokens do you know?</p>
-          <input type="checkbox" name="cb1" id="btc" value="0">
-          <label for="btc">Bitcoin</label>
-          <input type="checkbox" name="cb2" id="bch" value="1">
-          <label for="bch">Bitcoin Cash</label>
-          <input type="checkbox" name="cb3" id="eth" value="2">
-          <label for="eth">Ethereum</label>
-          <input type="checkbox" name="cb4" id="xrp" value="3">
-          <label for="xrp">Ripple</label>
-          <input type="checkbox" name="cb5" id="eos" value="4">
-          <label for="eos">EOS</label>
-          <input type="checkbox" name="cb6" id="xlm" value="5">
-          <label for="xlm">Stellar</label>
-          <input type="checkbox" name="cb7" id="usdt" value="6">
-          <label for="usdt">Tether</label>
-          <input type="checkbox" name="cb8" id="ada" value="7">
-          <label for="ada">Cardano</label>
-          <input type="checkbox" name="cb9" id="ltc" value="8">
-          <label for="ltc">Litecoin</label>
-          <input type="checkbox" name="cb10" id="xmr" value="9">
-          <label for="xmr">Monero</label>
+          <div class="cbgroup">
+            <div class="cbitem">
+              <input type="checkbox" name="cb1" id="btc" value="0">
+              <label for="btc">Bitcoin</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb2" id="bch" value="1">
+              <label for="bch">Bitcoin Cash</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb3" id="eth" value="2">
+              <label for="eth">Ethereum</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb4" id="xrp" value="3">
+              <label for="xrp">Ripple</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb5" id="eos" value="4">
+              <label for="eos">EOS</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb6" id="xlm" value="5">
+              <label for="xlm">Stellar</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb7" id="usdt" value="6">
+              <label for="usdt">Tether</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb8" id="xmr" value="7">
+              <label for="xmr">Monero</label>
+            </div>
+            <div class="cbitem">
+              <input type="checkbox" name="cb9" id="ltc" value="8">
+              <label for="ltc">Litecoin</label>
+            </div>
+          </div>
         </fieldset>
-      </div>
       </div>
       <div class="comments">
         <label for="text_area"><h3>Leave a Comment</h3></label>
@@ -112,7 +144,7 @@
       </div>
     </main>
     <footer>
-
+      <p>.</p>
     </footer>
   </div>
 </body>
