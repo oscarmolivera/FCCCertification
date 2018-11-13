@@ -1,0 +1,41 @@
+:root{
+--colorOne: #FFF;
+}
+*{
+  box-sizing: border-box;
+  -webkit-width: border-box;
+  -moz-width: border-box;
+  -ms-width: border-box;
+  -o-width: border-box;
+  width: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body{
+}
+
+section{
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  background: rgba(255,255,255,0.01) url("../images/cover.png");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#svg4386{
+  position: absolute;
+  right: 0px;
+  widows: 100% ;
+}
+
+#svg4386 path{
+  fill: var(--colorOne);
+}
+
+section.sec2{
+  width: 100%;
+  height: 100vh;
+  background: var(--colorOne);
+}
