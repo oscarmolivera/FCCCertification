@@ -13,11 +13,11 @@
       <a href="#" class="logo"><img id="header-img" src="img/logo.png" alt="LOGO" height="64" width="64" alt="TravelChile Logo"></a>
     </div>
     <nav id="nav-bar">
-      <ul>
-        <li class = "nav-link"><a href="#showcase">Home</a></li>
-        <li class = "nav-link"><a href="#where">Where to go</a></li>
-        <li class = "nav-link"><a href="#what">What to do</a></li>
-        <li class = "nav-link"><a href="#events">Plan your trip</a></li>
+      <ul class="menu-items">
+        <li class = "nav-link li-home"><a href="#showcase">Home</a></li>
+        <li class = "nav-link li-where"><a href="#where">Where to go</a></li>
+        <li class = "nav-link li-what"><a href="#what">What to do</a></li>
+        <li class = "nav-link li-plan"><a href="#events">Plan your trip</a></li>
       </ul>
     </nav>
   </header>
@@ -30,7 +30,7 @@
     <section id="where">
       <h2>Come and see for yourself.</h2>
       <div class="where-wrapper">
-        <iframe id="video" src="https://www.youtube.com/embed/RK3Ou8vq84Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="video" src="https://www.youtube.com/embed/RK3Ou8vq84Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
     <section id="what">
@@ -38,53 +38,73 @@
       <div class="dark-dash"></div>
       <div class="wrapper">
         <div class="what-item">
-          <img class="what-image" src="img/1194384.png" alt="antofagasta">
+          <img class="what-img" src="img/1194384.png" alt="antofagasta">
           <p class="what-text">Sun and Sea</p>
         </div>
         <div class="what-item">
-          <img class="what-image" src="img/1196835.png" alt="Iquique">
+          <img class="what-img" src="img/1196835.png" alt="Iquique">
           <p class="what-text">Desert Nights</p>
         </div>
         <div class="what-item">
-          <img class="what-image" src="img/1217454.png" alt="LaSerena0">
+          <img class="what-img" src="img/1217454.png" alt="LaSerena0">
           <p class="what-text">Colonial Sites</p>
         </div>
         <div class="what-item">
-          <img class="what-image" src="img/1209690.png" alt="Santiago">
+          <img class="what-img" src="img/1209690.png" alt="Santiago">
           <p class="what-text">Vibrant City</p>
         </div>
         <div class="what-item">
-          <img class="what-image" src="img/1219143.png" alt="Concepcion">
+          <img class="what-img" src="img/1219143.png" alt="Concepcion">
           <p class="what-text">Forrest and Lakes</p>
         </div>
         <div class="what-item">
-          <img class="what-image" src="img/1219140.png" alt="Magallanes" width="60" height="60">
+          <img class="what-img" src="img/1219140.png" alt="Magallanes">
           <p class="what-text">Vast South</p>
         </div>
       </div>
     </section>
     <section id="places">
       <div class="places-wrapper">
-        <div class=place-item>
-          <div class="img-item"><img class="img-item" src="img/sec3_ata-360.jpg" alt=""></div>
-          <div class="text-item">The Greatness of Atacama Desert.<p><small>plan a trip here</small></p></div>
-          <div class="gray-dash"></div>
+        <div class=place-img>
+          <img src='img/sec3_ata-360.jpg'
+               srcset='img/sec3_ata-red.jpg 2000w,img/sec3_ata-360.jpg 1000w'
+               sizes='(min-width: 960px) 960px, 100vw'/>
         </div>
-        <div class=place-item>
-          <div class="img-item"><img class="img-item" src="img/sec3_san-360.jpg" alt=""></div>
-          <div class="text-item">Santiago de Chile.<p><small>plan a trip here</small></p></div>
-          <div class="gray-dash"></div>
+        <div class="text-item">
+          The Greatness of Atacama Desert.
+          <p><small>plan a trip here</small></p>
         </div>
-        <div class=place-item>
-          <div class="img-item"><img class="img-item" src="img/sec3_lyb-360.jpg" alt=""></div>
-          <div class="text-item">Beautiful Lakes and Forests.<p><small>plan a trip here</small></p></div>
-          <div class="gray-dash"></div>
+        <div class="gray-dash"></div>
+        <div class=place-img>
+          <img src='img/sec3_san-360.jpg'
+               srcset='img/sec3_ata-red.jpg 2000w,img/sec3_san-360.jpg 1000w'
+               sizes='(min-width: 960px) 960px, 100vw'/>
         </div>
-        <div class=place-item>
-          <div class="img-item"><img class="img-item" src="img/sec3_ant-360.jpg" alt=""></div>
-          <div class="text-item">Our piece at the end of the World.<p><small>plan a trip here</small></p></div>
-          <div class="gray-dash"></div>
+        <div class="text-item">
+          The Vibriant City Of Santiago.
+          <p><small>plan a trip here</small></p>
         </div>
+        <div class="gray-dash"></div>
+        <div class=place-img>
+          <img src='img/sec3_lyb-360.jpg'
+               srcset='img/sec3_ata-red.jpg 2000w,img/sec3_lyb-360.jpg 1000w'
+               sizes='(min-width: 960px) 960px, 100vw'/>
+        </div>
+        <div class="text-item">
+          The Magical Forests and Mountains.
+          <p><small>plan a trip here</small></p>
+        </div>
+        <div class="gray-dash"></div>
+        <div class=place-img>
+          <img src='img/sec3_ant-360.jpg'
+               srcset='img/sec3_ata-red.jpg 2000w,img/sec3_ant-360.jpg 1000w'
+               sizes='(min-width: 960px) 960px, 100vw'/>
+        </div>
+        <div class="text-item">
+          The End of the world is ours.
+          <p><small>plan a trip here</small></p>
+        </div>
+        <div class="gray-dash"></div>
       </div>
     </section>
     <section id="events" class="section">
