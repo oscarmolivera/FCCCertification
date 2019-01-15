@@ -88,7 +88,6 @@ body{
   margin: 0px auto 0px auto;
   padding: 15px 10px;
   text-align: center;
-
 }
 .where-wrapper{
   overflow: hidden;
@@ -177,7 +176,7 @@ body{
 }
 #events{
   width: auto;
-  height: 60vh;
+  height:100%;
   overflow-y: hidden;
   background: url('../img/sec4_pas-360.jpg') no-repeat center/cover;
 }
@@ -215,17 +214,21 @@ footer{
   color: var(--navcolor);
   height: 100%;
 }
-.copyright-item{
-  text-align: right;
-  padding-right: 15px;
-}
 footer ul{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 0px;
+  padding: 0px;
   list-style-type: none;
+  font-size: 0.8em;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  row-gap: 1em;
 }
 footer ul li{
+  padding: 10px;
+}
+footer ul li a{
   text-decoration: none;
+  color:var(--navcolor);
 }
 
 /*=TABLET DESIGN=*/
@@ -289,16 +292,40 @@ footer ul li{
     font-size: 1.6rem;
     margin-top: 3px;
   }
-  .where-wrapper iframe {
-    height: 95%;
-    left: 20px;
-    width: 95%;
+  #where{
+    padding: 0px 45px 15px 45px;
+  }
+  .where-item{
+    font-size: 1.4em;
+    font-weight: lighter;
   }
   .place-wrapper{
     justify-content: center;
   }
   .place-img{
     width: 95%;
+  }
+  #what h2{
+    font-size: 1.7em;
+  }
+  .what-img {
+    height: 92px;
+    width: 92px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .places-wrapper{
+      align-items: center;
+  }
+  .text-item{
+    font-size: 1.7em
+  }
+  .text-item p{
+    font-weight: lighter;
+    padding-bottom: 15px;
+  }
+  .content-form{
+    margin: 15px 105px auto 105px;
   }
 }
 /*=BIG SCREEN DESIGN=*/
