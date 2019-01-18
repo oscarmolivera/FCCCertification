@@ -2,3 +2,31 @@
 /*Initial rules*/
 /*General*/
 @import url('https://fonts.googleapis.com/css?family=Sarabun:100,200,300');
+:root{
+
+  }
+  *::before, *::after {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+  }
+  html, body{
+    margin: 0px;
+    padding: 0px;
+  }
+  body{
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 100;
+  }
+  .main-section{
+      background: gray;
+      height: 100vh;
+  }
+  @media(minwidth: 960px){
+    body{
+        font-family: 'Sarabun', sans-serif;
+        font-weight: 300;
+      }
+  }
