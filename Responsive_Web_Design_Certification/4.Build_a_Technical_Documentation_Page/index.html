@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,70 +8,318 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
+
 <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <nav id="navbar">
-        <header>
-            <ul>
-                <li><a class="nav-link" href="#Title1">Title1</a></li>
-                <li><a class="nav-link" href="#Title2">Title2</a></li>
-                <li><a class="nav-link" href="#Title3">Title3</a></li>
-                <li><a class="nav-link" href="#Title4">Title4</a></li>
-                <li><a class="nav-link" href="#Title5">Title5</a></li>
-                <li><a class="nav-link" href="#Title6">Title6</a></li>
-                <li><a class="nav-link" href="#Title7">Title7</a></li>
+    <!--  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <header class="title-header">
+        <div class="logo">
+            <img src="https://i.postimg.cc/WbcWfhzX/ruby-techdoc-long.png" alt="logo" href="#title" />
+        </div>
+        <div class="divider"></div>
+        <div id="title" class="title">Standard Library Documentation</div>
+    </header>
+    <nav id="navbar" role="navigation">
+    <div class="menu-toggle">
+            <label for="toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <input type="checkbox" id="toggle" class="nav-toggle" />
+            <header>Table of Contents</header>
+            <div class="search-box"><input type="text" name="search" id="search-box" placeholder="Search these pages"></div>
+            <div class="version"><em>ver: 0.10.1, 2018-12-25</em></div>
+            <ul id="menu">
+                <li><a class="nav-link" href="#syntax">Syntax</a></li>
+                <li><a class="nav-link" href="#control_expressions">Control Expressions</a></li>
+                <li><a class="nav-link" href="#assigment">Assigment</a></li>
+                <li><a class="nav-link" href="#methods">Methods</a></li>
+                <li><a class="nav-link" href="#modules">Modules</a></li>
+                <li><a class="nav-link" href="#classes">Classes</a></li>
+                <li><a class="nav-link" href="#precedence">Precedence</a></li>
             </ul>
-        </header>
+        </div>
     </nav>
     <main id="main-doc">
-        <section id="Title1" class="main-section">
-            <header>Title1</header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+        <div class="preface">
+            <h1>Introducction</h1>
+            <p>This collection is brought to you by <a href="http://ruby-doc.org/">Ruby-doc</a> 
+            Whether you are browsing online or offline, we hope that your use of Ruby's standard library will 
+            become more productive as a result of this effort.
+            <h1>What you'll find here</h1>
+            <p>Each package in the Ruby standard library (found in lib/ directory of the Ruby source code, 
+               or lib/ruby/1.x/ of a Ruby installation) has been run through RDoc and the results have been collected 
+               here. Ruby-doc volunteers and library authors add comments to the Ruby source code repository, and it 
+               is those comments that RDoc captures for display in this collection. As there are many libraries and 
+               few volunteers, this is a long task.</p>
+            <h1>Credits</h1>
+            <p>Much of the documentation itself has been created by Gavin Sinclair, William Webber, Lyle Johnson, 
+               James Edward Gray II, and library authors. Individual library files usually have code and documentation 
+               credits. Ruby-doc.org was created and is maintained by James Britt/Neurogami.    
+               Gavin Sinclair wrote the software (ruby stdlib-doc.rb gendoc --all) to generate this webpage (thanks, Amrita!). 
+               James Britt did some later hacking to bring some things up to date and to have it play nice with 
+               different Ruby versions.
+               Thanks to Dave Thomas for RDoc, without which this project would be impossible.
+            </p>
+        </div>    
+        <section id="syntax" class="main-section" >
+            <header>Syntax</header>
+            <p>The Ruby syntax is large and is split up into the following sections:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="table-wrapper">
+                            <div class="table-div">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Concept</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Literals</td>
+                                            <td>Numbers, Strings, Arrays, Hashes, etc.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Assignment</td>
+                                            <td>Assignment and variables.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Assignment</td>
+                                            <td>Assignment and variables.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Control Expressions.</td>
+                                            <td>if, unless, while, until, for, break, next, redo.</td>
+                                        </tr>    
+                                        <tr>
+                                            <td>Methods.</td>
+                                            <td>Method and method argument syntax.</td>
+                                        </tr>    
+                                        <tr>
+                                            <td>Calling Methods.</td>
+                                            <td>How to call a method (or send a message to a method).</td>
+                                        </tr>    
+                                        <tr>
+                                            <td>Modules and Classes.</td>
+                                            <td>Creating modules and classes including inheritance.</td>
+                                        </tr>    
+                                        <tr>
+                                            <td>Exceptions.</td>
+                                            <td>Exception handling syntax.</td>
+                                        </tr>    
+                                        <tr>
+                                            <td>Precedence.</td>
+                                            <td>Precedence of ruby operators.</td>
+                                        </tr>    
+
+                                        <tr>
+                                            <td>Refinements.</td>
+                                            <td>Use and behavior of the experimental refinements feature.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Miscellaneous.</td>
+                                            <td>alias, undef, BEGIN, END.</td>
+                                        </tr>                                                                                         
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="Title2" class="main-section">
-            <header>Title2</header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
-        <section id="Title3" class="main-section">
-            <header>Title3</header>
-            <p></p>
-        </section>
-        <section id="Title4" class="main-section">
-            <header>Title4</header>
-            <code></code>
-            <code></code>
-            <code></code>
-            <code></code>
-        </section>
-        <section id="Title5" class="main-section">
-            <header>Title5</header>
-            <code></code>
-            <code></code>
-            <code></code>
-        </section>
-        <section id="Title6" class="main-section">
-            <header>Title6</header>
-            <code></code>
-            <code></code>
-            <code></code>
-        </section>
-        <section id="Title7" class="main-section">
-            <header>Title7</header>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <section id="control_expressions" class="main-section">
+            <header>Control Expressions</header>
+            <p>Ruby has a variety of ways to control execution. All the expressions described here return a value.</p>
+            <p>For the tests in these control expressions, nil and false are false-values and true and any other object are true-values. In this document “true” will mean “true-value” and “false” will mean “false-value”.</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="expressions">
+                            <em>IF</em> Expression
+                        </div>
+                    </div>   
+                </div>
+            </div>    
+            <p>The simplest if expression has two parts, a “test” expression and a “then” expression. If the “test” expression evaluates to a true then the “then” expression is evaluated.</p>
+            <p>Here is a simple if statement:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="cy-code">if true then</span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "the test resulted in a true-value"</span> <br>
+                            <span class="cy-code">end</span>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>This will print “the test resulted in a true-value”.</p>  
+            <p>The <span class="cyan-color">then</span> is optional:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="cy-code">if true </span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "the test resulted in a true-value"</span> <br>
+                            <span class="cy-code">end</span>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>This document will omit the optional then for all expressions as that is the most common usage of <span class="or-code">if</span> .</p>                
+            <p>You may also add an else expression. If the test does not evaluate to true the else expression will be executed:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="cy-code">if false </span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "the test resulted in a true-value"</span> <br>
+                            <span class="cy-code">else </span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "the test resulted in a false-value"</span> <br>
+                            <span class="cy-code">end</span>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>This will print “the test resulted in a false-value”.</p>
+            <p>You may add an arbitrary number of extra tests to an if expression using elsif. An elsif executes when all tests above the elsif are false.</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="or-code">a </span><span class="wh-code">= </span><span class="cy-code">1 </span><br>
+                            <br>
+                            <span class="cy-code">if <span class="or-code">a</span> == 0 </span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "This is zero."</span> <br>
+                            <span class="cy-code">elseif <span class="or-code">a</span> == 1</span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "a is one."</span> <br>
+                            <span class="cy-code">else</span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "a is some other value."</span> <br>
+                            <span class="cy-code">end</span>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>This will print “a is one” as 1 is not equal to 0. Since else is only executed when there are no matching conditions.</p>
+            <p>Once a condition matches, either the if condition or any elsif condition, the if expression is complete and no further tests will be performed.</p>
+            <p>Like an <em>if</em>, an elsif condition may be followed by a <em>then</em>.</p>
+            <p>In this example only “a is one” is printed:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="or-code">a </span><span class="wh-code">= </span><span class="cy-code">1 </span><br>
+                            <br>
+                            <span class="cy-code">if <span class="or-code">a</span> == 0 </span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "This is zero."</span> <br>
+                            <span class="cy-code">elseif <span class="or-code">a</span> == 1</span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "a is one."</span> <br>
+                            <span class="cy-code">elseif <span class="or-code">a</span> >= 1</span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "a is greater than or equal to one."</span> <br>
+                            <span class="cy-code">else</span> <br>
+                            <span class="or-code">puts</span><span class="wh-code"> "a is some other value."</span> <br>
+                            <span class="cy-code">end</span>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>The tests for if and elsif may have side-effects. The most common use of side-effect is to cache a value into a local variable:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="cy-code">if <span class="or-code">a <span class="wh-code">=</span> object.some_value</span> </span>
+                            <span class="gr-code"># do something to a</span><br>
+                            <span class="cy-code">end</span>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <P>The result value of an if expression is the last value executed in the expression.</P>
+            <div class="limiter">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="expressions">
+                                <em>Ternary</em> IF
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <p>You may also write a if-then-else expression using ? and :. This ternary if:</p>  
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="or-code">input_type</span><span class="wh-code"> =</span><span class="or-code"> gets</span>
+                            <span class="cy-code"> =~</span><span class="re-code"> /hello/i</span><span class="cy-code"> ? </span><span class="wh-code">"greeting" <span class="cy-code">:</span> "other"</span>   
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>Is the same as this if expression:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="or-code">input_type </span><span class="wh-code">=</span><br>
+                            <span class="cy-code">if</span><span class="or-code">gets</span><span class="cy-code">=~</span><span class="re-code">/hello/i</span><br>
+                            <span class="wh-code">"greeting"</span><br>
+                            <span class="cy-code">else</span><br>
+                            <span class="wh-code">"other"</span>
+                            <span class="cy-code">end</span>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>While the ternary if is much shorter to write than the more verbose form, for readability it is recommended that the ternary if is only used for simple conditionals. Also, avoid using multiple ternary conditions in the same expression as this can be confusing.</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="expressions">
+                                <em>unless</em> Expresion
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <p>The unless expression is the opposite of the if expression. If the value is false, the “then” expression is executed:</p>            
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="cy-code">unless true</span><br>
+                            <span class="or-code">puts</span><span class="wh-code"> "the value is a false-value"</span> <br>
+                            <span class="cy-code">end</span><br>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>This prints nothing as true is not a false-value.</p>
+            <p>You may use an optional then with unless just like <em>if</em>.</p>
+            <p>Note that the above unless expression is the same as:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="cy-code">if not true</span><br>
+                            <span class="or-code">puts</span><span class="wh-code"> "the value is a false-value"</span> <br>
+                            <span class="cy-code">end</span><br>
+                        </code>
+                    </div>   
+                </div>
+            </div>
+            <p>Like an <em>if</em> expression you may use an else condition with <em>unless</em>:</p>
+            <div class="limiter">
+                <div class="container">
+                    <div class="code-wrapper">
+                        <code>
+                            <span class="cy-code">if not true</span><br>
+                            <span class="or-code">puts</span><span class="wh-code"> "the value is a false-value"</span> <br>
+                            <span class="cy-code">end</span><br>
+                        </code>
+                    </div>   
+                </div>
+            </div>            
         </section>
     </main>
-</body>
+</body>   
 </html>
