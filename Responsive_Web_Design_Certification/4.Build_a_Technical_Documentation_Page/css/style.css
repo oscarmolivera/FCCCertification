@@ -1,4 +1,4 @@
-/*== MOBILE FIRST DESIGN =*/
+/**** MOBILE FIRST DESIGN = 380px ****/
 /*Initial rules*/
 /*General*/
 
@@ -49,7 +49,7 @@ body {
   height: 1.5px;
   margin-left: 15px;
   margin-top: 15px;
-  width: 350px;
+  width: 90%;
   background: #6C6C6C;
   position: absolute;
 }
@@ -61,13 +61,15 @@ body {
 .menu-toggle header,
 .menu-toggle input,
 .menu-toggle .version,
-.menu-toggle ul{
+.menu-toggle ul,
+.separator span{
   display: none; 
 }
 .nav-toggle:checked ~ header,
 .nav-toggle:checked ~ ul,
 .nav-toggle:checked ~ .version,
-.nav-toggle:checked ~ .search-box input{
+.nav-toggle:checked ~ .search-box input,
+.nav-toggle:checked ~ .separator span{
   display: block; 
 }
 .menu-toggle header {
@@ -88,7 +90,7 @@ body {
   top:.0em;
   bottom: 0em;
   left: 100%;
-  width: 9rem;
+  width: 100%;
   background: #6C6C6C;
 }
 .menu-toggle ul{
@@ -122,7 +124,7 @@ body {
   top: 0px;
   left: 0px;
   margin-left: 1em;
-  height: 9%;
+  height: 70px;
   display: flex;
   align-items: center;
 }
@@ -199,6 +201,18 @@ body {
   color: #303030;
   text-align: center;
 }
+.separator span{
+  position: absolute;
+  top:480px;
+  z-index: 25;
+  padding-left: 1em;
+  border-top: .5px solid #d3d3d3;
+  padding-top: 5px;
+  width: 245px;
+  margin:0 .5em 0 .5em;
+  color: #303030;
+  text-align: center;
+}
 
 /*Main Sections*/
 .preface{
@@ -213,7 +227,8 @@ body {
 .preface p{
   margin: 5px 15px 5px 15px;
 }
-.preface a{
+.preface a,
+.main-section a{
   text-decoration: none;
   color:#424141;
 }
@@ -241,8 +256,13 @@ body {
   flex-wrap: wrap;
 }
 
-.table-wrapper, .wrapper {
+.table-wrapper, 
+.wrapper,
+.code-wrapper {
   width: 90%;
+}
+.main-section p{
+  padding-left:10px;
 }
 
 table {
@@ -338,35 +358,40 @@ tbody tr:hover {
   text-align: right;
   padding-right: 62px;
 }
-
-.expressions{
+/*Sections*/
+.expressions, 
+.code {
   border: .8px solid rgb(122, 67, 67);
   background: #DDDDDD;
   border-radius: 3px;
   font-size: 1.2em;
   padding: 15px;
   text-align: center;
+  margin-top: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
 }
-.code-wrapper {
-  width: 90%;
-  margin: auto 15px auto 15px;
+.code-wrapper{
   background: #303030;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  margin: auto 15px auto 15px;
+  border-radius: 4px;
+  font-size: .8em;
+}
+.main-section h1{
+  padding-left: 22px;
+  margin-bottom: 0px;
+  font-size:1em;
 }
 code {
-  display: inline-block;
-  width: 100%;
-  padding: 5px;
   font-family: 'Nanum Gothic Coding',  sans-serif;
-  font-weight: 200;
-  background: #636363;
-  color: #4F6E6E;
-  border-radius: 2px;
-  font-size: 1.2em;
+  font-size: 1.3em;
+}
+.printers{
+  border: .3px dashed rgb(122, 67, 67);
+  background: rgb(231, 230, 230);
+}
+.printers p{
+  margin: 5px;
 }
 .wh-code{
   color: whitesmoke;
@@ -382,4 +407,94 @@ code {
 }
 .re-code{
   color: #FF4136;
+}
+.ye-code{
+  color:#FFDC00;
+}
+.te-code{
+  color:#39CCCC;
+}
+.ft-wrapper{
+  background: #dadada;
+  padding: 3px;
+  font-size: .74em;
+}
+.ft-wrapper p{
+  margin: 0px;
+}
+@media (min-width: 485px){
+  .nav-toggle-label{
+    height: 85px;
+  }
+  .code-wrapper,
+  .main-section p{
+    width: 85%;
+  }
+}
+@media (min-width: 535px){
+  .nav-toggle-label{
+    height: 80px;
+  }
+  .menu-toggle header{
+    width: 50%;
+  }
+  .menu-toggle header::after{
+    left: 99%;
+    width: 100%;
+  }
+  .menu-toggle ul::before{
+    width: 100%;
+  }
+}
+
+@media (min-width: 605px){
+
+  .title-header{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .logo{
+    padding-left: 60px;
+  }
+
+  .logo img{
+    height: 36px;
+  }
+  .nav-toggle-label{
+    height: 65px;
+  }
+  .divider, .title{
+    display: block;
+  }
+  .divider{
+    border-left: rgb(119, 25, 25) 3px solid;
+    height: 40px;
+    background: none;
+    margin-left: 284px;
+    align-self: center;
+  }
+  .title{
+    margin-top:15px;
+    margin-right:15px;
+    align-self: center;
+    font-size: 1.1em; 
+    justify-self: end;
+    font-weight: 500;
+    color: rgba(72, 55, 55, 1);
+  }
+}
+@media (min-width: 715px){
+  body{
+    display: grid;
+  }
+  
+  .menu-toggle header,
+  .menu-toggle .version,
+  .menu-toggle ul,
+  .separator span{
+    display: block;
+  }
+  .menu-toggle label{
+    display: none;
+  }
 }
