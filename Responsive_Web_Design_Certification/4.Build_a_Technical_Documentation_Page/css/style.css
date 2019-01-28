@@ -92,6 +92,7 @@ body {
   left: 100%;
   width: 100%;
   background: #6C6C6C;
+  margin: 0px;
 }
 .menu-toggle ul{
   position: absolute;
@@ -154,7 +155,7 @@ body {
   margin: 0px;
   padding: 85px 0 0 0 ;
   line-height: .9em;
-  background:whitesmoke;
+  background: whitesmoke;
 }
 #menu li{
   padding-top: .8em;
@@ -261,7 +262,7 @@ body {
 .code-wrapper {
   width: 90%;
 }
-.main-section p{
+.main-section p, #intro p{
   padding-left:10px;
 }
 
@@ -304,7 +305,6 @@ table td.c, table th.c {
 table td.r, table th.r {
   text-align: center;
 }
-
 
 .table-div th{
   font-size: 1.3em;
@@ -436,6 +436,7 @@ code {
     height: 80px;
   }
   .menu-toggle header{
+    margin-top: 0px;
     width: 50%;
   }
   .menu-toggle header::after{
@@ -443,11 +444,15 @@ code {
     width: 100%;
   }
   .menu-toggle ul::before{
+    margin-top: 0px;
     width: 100%;
   }
 }
-
 @media (min-width: 605px){
+
+  header{
+    background: white;  
+  }
 
   .title-header{
     display: grid;
@@ -482,6 +487,9 @@ code {
     font-weight: 500;
     color: rgba(72, 55, 55, 1);
   }
+  .nav-link{
+    font-size: 1.1em;
+  }
 }
 @media (min-width: 715px){
   body{
@@ -491,10 +499,203 @@ code {
   .menu-toggle header,
   .menu-toggle .version,
   .menu-toggle ul,
+  .search-box input,
   .separator span{
     display: block;
   }
+  .search-box{
+    z-index: 870;
+  }
   .menu-toggle label{
     display: none;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 42% 1fr;
+    grid-template-areas: "header header"
+                         "navbar main-doc"
+                         "footer footer"; 
+  }
+  #header{
+    all:unset;
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display:flex;
+    background: #fff;
+    height: 76px;
+
+  }
+  .logo{
+    padding-left: 10px;
+    margin-top: 5px;
+  }
+  .logo img{
+    height: 64px;
+  }
+  .divider{
+    height: 48px;
+    background: none;
+    margin-left: 405px;
+    margin-top: 0px;
+
+  }
+  .title{
+    font-size: 1.3em; 
+    font-weight: 600;
+    width: 100%;
+    margin: 0px 5px 0px 0px;
+    padding: 0px;
+    text-align: right;
+    border-bottom: 2px solid white;
+  }
+  .menu-toggle ul::before {
+    display: none;
+  }
+
+  #navbar{
+    grid-area: navbar;
+    position: fixed;
+    width: 100%;
+  }
+  #main-doc{
+    grid-area: main-doc;
+    grid-row: 1 / 3;   
+  }
+  .menu-toggle header{
+    display:  none;
+  }
+  #menu{
+    top: 75px;
+  }
+
+  .search-box{
+    top: 95px;
+  }
+  .version{
+    top: 135px;
+  }
+
+  .main-section{
+    padding-top: 70px;
+  }
+
+  #footer{
+    grid-area: footer;
+    z-index: 998;
+    width: 100%;
+  }
+  .ft-wrapper{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 835px){
+  body{
+    grid-template-columns: 36% 1fr;
+  }
+  .divider{
+    margin-left: 444px;
+  }
+  .title{
+    margin: 0px 10px 0px 0px;
+    font-size: 1.4em; 
+  }
+  .ft-wrapper{
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 955px){
+  body{
+    grid-template-columns: 32% 1fr;
+  }
+  .divider{
+    margin-left: 544px;
+  }
+  .title{
+    margin: 0px 15px 0px 0px;
+    font-size: 1.6em; 
+  }
+  .nav-link{
+    font-size: 1.2em;
+  }
+  .main-section{
+    padding-top: 70px;
+  }
+}
+
+@media (min-width: 1180px){
+
+  body{
+    grid-template-columns: 25% 1fr;
+  }
+
+  .main-section p, #intro p{
+    margin-left: 45px;
+  }
+
+  .divider{
+    margin-left: 404px;
+  }
+  .title{
+    font-size: 1.9em;
+    text-align: left;
+    margin-left: 25px; 
+  }
+}
+
+@media (min-width: 1290px){
+  body{
+    grid-template-columns: 23% 1fr;
+  }
+}
+
+@media (min-width: 1410px){
+  body{
+    grid-template-columns: 20% 1fr;
+  }
+
+  .main-section p, #intro p{
+    margin-left: 55px;
+    font-size: 1.3em;
+  }
+  
+}
+
+@media (min-width: 1610px){
+  body{
+    grid-template-columns: 15% 1fr;
+  }
+
+  header{
+    height: 108px;
+  }
+  .logo img{
+    height: 72px;
+  }
+  .divider{
+    margin-left: 454px;
+  }
+  .title{
+    margin: 0px 0px 0px 25px;
+    font-size: 1.9em; 
+  }
+  .version{
+    font-size: 1.2em;
+  }
+  .nav-link{
+    font-size: 1.3em;
+  }
+  .main-section p, #intro p{
+    margin-left: 75px;
+    font-size: 1.3em;
+  }
+  .main-section header{
+    font-size: 3em;
   }
 }
