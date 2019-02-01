@@ -1,1 +1,92 @@
-        
+/**** MOBILE FIRST DESIGN = 380px ****/
+ @import url('https://fonts.googleapis.com/css?family=Sarabun');
+ @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
+
+:root {
+  --lightyellow: #ffeeaa;
+  --lightgreen: #668000;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+}
+header{
+  position: absolute;
+  background: var(--lightyellow);
+  width: 100%;
+}
+.header-wrapper{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  position: relative;
+}
+.logo img{
+  height: 84px;
+}
+.header-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toggle-wrapper{
+  height: 40px;
+  width: 45px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: 1.8rem;
+  border: .9px solid var(--lightgreen);
+  border-radius: 5px ;
+  text-align: center;
+  
+}
+.toggle-wrapper input[type=checkbox],
+.header-wrapper nav a{
+  display: none;
+}
+
+.toggle-wrapper label span,
+.toggle-wrapper label span::before,
+.toggle-wrapper label span::after{
+  display: block;
+  background: var(--lightgreen);
+  height: 3px;
+  width: 30px;
+  position: relative;
+  justify-self: center;
+}
+.toggle-wrapper label span{
+  left: 7px;
+}
+.toggle-wrapper label span::before,
+.toggle-wrapper label span::after{
+  content: '';
+  position: absolute;
+}
+.toggle-wrapper label span::before{
+  bottom: 8px;
+}
+.toggle-wrapper label span::after{
+  top: 8px;
+}
+#welcome-section{
+    height: 100vh;
+    background: url('https://i.postimg.cc/W1py6pKb/home-bckgnd.jpg') no-repeat left/cover;
+}
