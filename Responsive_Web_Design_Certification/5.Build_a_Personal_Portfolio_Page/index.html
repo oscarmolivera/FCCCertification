@@ -6,33 +6,80 @@
         <title>fCC - Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
 <body>
     <header>
-        <div class="header-wrapper">
-            <div class="toggle-wrapper">
-                <input type="checkbox" name="toggle-cb" id="toggle">
-                <label for="toggle"><span></span></label>
-            </div>
-            <div class="logo"><img src="https://i.postimg.cc/FK8RNP8t/logo-portafolio.png" alt="LOGO"></div>
-            <nav id="navbar" class="navbar" role="navigation">
-                <a href="#welcome-section">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#social">Social</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+        <nav class="navbar" id="navbar" role="navegation">
+            <input type="checkbox" id="toggle" class="toggle-menu">
+            <div class="logo"><img src="../img/logo_portafolio.png" alt="LOGO"></div>
+            <label for="toggle" class="toggle-label"><span></span></label>
+            <div class="menu">
+                <ul class=" menu-items lista">
+                    <li><a href="#welcome-section">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>    
+        </nav>
     </header>
     <main>
         <section id="welcome-section">
-            <h1>Titulo</h1>
+            <h1>Learning to Code</h1>
+            <p>Coding has been my passion over the last 10 years and now I currently learnning from <a href="http://freecodecamp.org">freeCodeCamp</a> how to make greats web page. This is my approach to a portafolio page</p>
+            <div class="invoice">
+                <a class="btn-form btn-primary" href="#contact-form">Ask me Anything <i class="fas fa-angle-right fa-lg"></i> </a>
+            </div>
         </section>
         <section id="projects">
-            <div class="project-tile">
-                    <a id="profile-link" href="htts://github.com/oscarmolivera/">github</a>
+            <div class="wrapper">
+                <h3>Projects</h3>
+                <div class="container">    
+                    <div class="project-tile">
+                        <div class="project-img">
+                            <img src="https://picsum.photos/720/440" alt="pro-1">
+                        </div>
+                        <div class="project-det">
+                            <h5>Design Truck</h5>
+                            <p>A simple store and place for new designers</p>
+                        </div>
+                        <div class="info">
+                            <div class="tech"><i class="fab fa-html5 fa-lg"></i> | <i class="fab fa-css3-alt fa-lg"></i></div>
+                            <div class="link"><a class="btn-project" href="#behance">visit repository</a></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="project-tile">
+                        <div class="project-img">
+                            <img src="https://picsum.photos/720/440" alt="pro-1">
+                        </div>
+                        <div class="project-det">
+                            <h5>Design Truck</h5>
+                            <p>A simple store and place for new designers</p>
+                        </div>
+                        <div class="info">
+                            <div class="tech"><i class="fab fa-html5 fa-lg"></i> | <i class="fab fa-css3-alt fa-lg"></i></div>
+                            <div class="link"><a class="btn-project" href="#behance">visit repository</a></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="project-tile">
+                        <div class="project-img">
+                            <img src="https://picsum.photos/720/440" alt="pro-1">
+                        </div>
+                        <div class="project-det">
+                            <h5>Design Truck</h5>
+                            <p>A simple store and place for new designers</p>
+                        </div>
+                        <div class="info">
+                            <div class="tech"><i class="fab fa-html5 fa-lg"></i> | <i class="fab fa-css3-alt fa-lg"></i></div>
+                            <div class="link"><a class="btn-project" href="#behance">visit repository</a></div>
+                        </div>
+                    </div>
+                    <hr>                   
+                </div>
             </div>
-            
         </section>
     </main>
     <footer></footer>
