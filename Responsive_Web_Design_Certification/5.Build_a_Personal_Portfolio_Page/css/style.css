@@ -1,14 +1,14 @@
 /**** MOBILE FIRST DESIGN = 380px ****/
-@import url('https://fonts.googleapis.com/css?family=Sarabun');
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
-
+@import url('https://fonts.googleapis.com/css?family=Sarabun 100 200 300 400 500 600 700 800 ');
+/*==================================[GENERAL]==*/
 :root {
  --lightyellow: #ffeeaa;
  --green: #668000;
  --lightgreen: #7f885b;
  --midgreen: #285839;
  --darkgreen: #192F23;
- --liggreen: #547555;
+ --liggreen: #67b96a;
+ --lightorange: #dbbd9f;
  --bestorange: #D4812F;
  --midorange: #BE7433;
  --sofred:  	#8F4E3A;
@@ -21,7 +21,7 @@
  --notsoblack: #1E2327;
 }
 
-*::before, *::after {
+*, *::before, *::after {
  box-sizing: border-box;
  text-rendering: optimizeLegibility;
  -webkit-font-smoothing: antialiased;
@@ -47,10 +47,9 @@ a:link {
  text-decoration: none;
  color: inherit;
 }
+/*==================================[NAVBAR]==*/
 #toggle{
  display:none;
-}
-.toggle-label{
 }
 header{
  width: 100%;
@@ -62,16 +61,21 @@ header{
  position: fixed;
  background-color: var(--bestorange);
  width: 100%;
+ display: inline-grid;
+ grid-template-columns: auto 1fr;
+ justify-content: space-between;
  z-index: 1;
 }
 .logo{
-
  float: left;
- height:auto;
+ height:64px;
+ width: 16em;
+ background: var(--darkgreen);
 }
 .logo img{
- margin-top: 0px;
+ margin-top: 5px;
  height: 64px;
+ padding-left: 20px;
 }
 .menu{
  background:var(--bestorange);
@@ -86,9 +90,14 @@ header{
 #toggle:checked ~ .menu {
  height: 190px;
 }
+.toggle-label{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 .toggle-label span{
  top: 30px;
- left: 280px;
+ right: 15px;
  display:none;
 }
 .toggle-label span,
@@ -142,6 +151,7 @@ header{
 .menu-items > li:nth-child(even) a {
  background-color: var(--seriousblack);
 }
+/*==================================[*SECTION: Welcome]==*/
 #welcome-section{
  height: 100vh;
  background: url('https://i.postimg.cc/W1py6pKb/home-bckgnd.jpg') no-repeat left/cover;
@@ -157,7 +167,9 @@ main section{
   width: 100%;
 }
 #welcome-section::before,
-#projects::before{
+#projects::before, 
+#profile::before,
+#contact::before{
  content: "";
  display: block;
  height: 50px;
@@ -175,8 +187,7 @@ main section{
  margin-bottom: .5em;
 }
 #welcome-section p a {
- color: var(--midwhite);
- text-decoration-line: underline
+ color: var(--lightyellow);
 }
 .invoce { 
  display: grid;
@@ -205,9 +216,10 @@ main section{
  background-color:var(--midwhite);
  font-weight:300;
 } 
+/*==================================[*SECTION: Projects]==*/
 #projects{
  height: auto;
- background: var(--midwhite);
+ background: var(--crispywhite);
  width: 100%;
  margin: 0 auto;
 } 
@@ -219,10 +231,11 @@ main section{
  padding: 33px 30px;
 }
 .wrapper h3{
- color: var(--crispywhite);
+ color: var(--notsoblack);
  text-transform: uppercase;
  font-size: 2em;
  margin-bottom: 1em;
+ font-weight: 100;
 }
 .project-tile{
  width: 100%;
@@ -230,7 +243,7 @@ main section{
 .project-img {
  float: left;
  font-size:0;
- border: var(--crispywhite) 5px solid;
+ border: var(--notsoblack) 5px solid;
  border-top-left-radius: 3px;
  border-top-right-radius: 3px;
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -244,60 +257,219 @@ main section{
  padding-bottom: 10px;
  float: left;
  height:auto;
- background: var(--crispywhite);
  width: 100%;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .project-det h5{
  font-size: 1.2em;
  font-weight: 800;
- border:var(--crispywhite) 5px solid;
- 
 }
-.project-det h5, 
-.project-det p{
- color: var(--darkbrown);
+.project-det h5{
+  padding-top: 15px;
+ color: var(--notsoblack);
  text-align: center;
 }
-
+.project-det p{
+  color: var(--notsoblack);
+  text-align: left;
+  padding-left: 15px;
+}
 .info{
  width: 100%;
- padding-top: 15px;
+ padding-top: 5px;
  padding-bottom: 8px;
  display: inline-grid;
  grid-template-columns: 1fr 1fr;
  grid-column-gap: 1em;
  justify-content: space-between;
- color: var(--crispywhite);
-
+ color: var(--midorange);
 }
 .tech{
  text-align: start;
- 
+ display: flex;
+ align-items: center; 
+}
+.tech-icon img {
+  height: 20px;
+  color: var(--bestorange);
 }
 .link{
  text-align: end;
+ color: var(--crispywhite);
 }
 .tech i{
   padding: 3px;
 }
 .btn-project{
   display: block; 
-  padding: 0px 0px 3px 0px; 
+  padding: 5px 0px 5px 0px; 
   margin: 0px;  
   border-radius: 3px;
   width: 100%;
-  background: var(--midgreen);
+  background: var(--midwhite);
   text-align:center;
   position:relative;
+ }
+ .btn-project:hover, 
+ .btn-project:active{
+  box-shadow:inset 0 0.6em 2em -0.3em rgba(212,129,47,0.55),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+  background: var(--notsoblack);
+  color: var(--bestorange);
+ }
+ .btn-project:active{
+  background: var(--notsoblack);
+  color: var(--bestorange);
+  transform: scale(1.1) translate(2px, 3px);
  }
 hr {
   margin-top: 15px;
   border: 0;
   height: 1px;
   background: #333;
-  background-image: linear-gradient(to right,var(--midorange), var(--bestorange),var(--midwhite));
+  background-image: linear-gradient(to right,var(--midorange), var(--notsoblack),var(--midorange));
   margin-bottom: 15px;
 }
-
-
+/*==================================[*SECTION: Profile]==*/
+#profile{
+  height: auto;
+  background: var(--notsoblack);
+}
+#profile h3{
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--midwhite);
+  font-weight: 100;
+}
+#profile .wrapper .container .skills{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .8rem;
+ }
+ .skill-item{
+  color: var(--midwhite);
+  text-align: center;
+}
+ #profile .wrapper .container .personal-info {
+   margin-top: 2em;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-gap: .8rem; 
+ }
+ .photo{
+  display: flex;
+  justify-content: center;
+  height:auto;
+ }
+ .photo img{
+  margin-top: 0px;
+  height: 200px;
+  border-radius: 100px;
+ }
+ .data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .data h4{
+   font-weight: 200;
+   font-size: 2em;
+ }
+ .data h4,
+ .data p{
+  color: var(--midwhite);
+  padding: 5px;
+ }
+ .social-media{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 20px;
+ }
+ .rrss-item{
+   color: var(--midwhite);
+ }
+ .wrapper-h3{
+  margin-bottom: 5px !important; 
+ }
+ .sub-title{
+   font-size: 1em;
+   text-transform: uppercase;
+   font-weight: 100;
+   margin-bottom: 10px;
+   text-align: center; 
+ }
+ /*==================================[*SECTION: Contact]==*/
+ #contact{
+   background: var(--lightgreen);
+ }
+ .contact-form{
+   width: 100%;
+ }
+ #survey-form{
+   display: grid;
+   grid-template-columns: 1fr;
+   width: 100%;
+ }
+ .first-line,
+ .second-line,
+ .third-line{
+   width: 100%;
+   font-size: 1.3em;
+   font-weight: 100;
+ }
+ .first-line label,
+ .first-line input,
+.second-line label,
+.second-line textarea{
+  line-height: 2em;
+  padding: 10px;
+}
+.first-line input,
+.second-line textarea,
+#submit{
+  line-height: 2em;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1.8px solid var(--sofred);
+}
+.first-line input:hover,
+.second-line textarea:hover{
+  box-shadow: inset 0px 0px 15px -2px rgba(143,78,58,0.91);
+  border: 1.8px solid var(--sofred);
+}
+ #survey-form div label,
+ #survey-form div input,
+ #survey-form div textarea{
+   width: 100%;
+ }
+ #submit{
+  font-size: .8em;
+  font-weight: 100;
+  background: var(--darkgreen);
+  color:var(--crispywhite);
+  border: 1.8px solid var(--lightgreen);
+ }
+ #submit:hover, 
+ #submit:active{
+  background: var(--notsoblack);
+  color: var(--crispywhite);
+  font-weight: 400;
+ }
+ #submit:hover{
+  background: var(--notsoblack);
+  color: var(--bestorange);
+  transform: scale(1.1) translateX(.3px) translateY(.3px);
+  transition: all 900ms ease;
+ }
+ /*==================================[*SECTION: Footer]==*/
+footer{
+  height: 6vh;
+  background: var(--bestorange);
+  display: flex;
+  justify-content: center;
+}
+footer p{
+  text-align: center;
+  align-self: center;
+}
