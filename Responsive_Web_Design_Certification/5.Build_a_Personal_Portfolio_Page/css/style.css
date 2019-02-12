@@ -509,52 +509,9 @@ footer p{
   .project-tile{
     margin-bottom: 15px;
    }
-   #profile .wrapper{
-   display: grid;
-   height: 100%;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: repeat(6, 1fr);
-   grid-gap: 0rem; 
-  }
-  #profile .wrapper h3{
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    margin-bottom: 15px
-  }
-  #profile .wrapper .container{
-    grid-column: 1 / 4;
-    grid-row: 2 / 7;
-  }
-  #profile .wrapper .container .skills{
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1.2rem;
+   .data{
+     flex-direction: column;
    }
-   .skill-item i{
-     font-size: 3.5em;
-   }
-   #profile .wrapper .container .personal-info {
-  margin-top: 2em;
-   display: grid;
-   height: 100%;
-   grid-template-columns: 1fr;
-   grid-gap: .8rem; 
-  }
-  .data{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .data h4{
-    font-weight: bold;
-  }
-  .data p{
-    width: 86%;
-  }
-  #contact .wrapper .container{
-    width: 75%;
-  }
 }
 
 /*==================================[@media: 780]==*/
@@ -628,6 +585,14 @@ footer p{
   .menu-items a:before li:nth-child(even){
     transition: all 1s;
   }
+  .info{
+    grid-column-gap: 3em;
+    grid-template-columns: 3fr 1fr;
+  }
+  #profile .wrapper .container{
+    width: 70%;
+  }
+
   .data p{
     font-size: 1.3em; 
   } 
@@ -635,7 +600,7 @@ footer p{
     padding-bottom: 5px;
   }
   .rrss-item{
-   font-size: 1em;
+   font-size: 1.5em;
   } 
 }
 
@@ -645,30 +610,11 @@ footer p{
   #contact .wrapper .container{
     width: 65%;
    }
-   .skills{
-    grid-gap: .2rem;
-  }
-  .skill-item-1,
-  .skill-item-4,
-  .skill-item-7{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .skill-item-2,
-  .skill-item-5,
-  .skill-item-8{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .skill-item-3,
-  .skill-item-6,
-  .skill-item-9{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+   #profile .wrapper .container .skills{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+   }
   .data p{
     width: 66%;
   }
@@ -685,7 +631,7 @@ footer p{
 
 /*==================================[@media: 1020]==*/
 @media only screen and (min-width: 1020px) {
-  #welcome-section::before, 
+#welcome-section::before, 
 #profile::before,
 #contact::before{
  content: "";
@@ -760,7 +706,9 @@ footer p{
     display: none;
   }
   .project-tile{
-    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
    }
    .project-img {
     max-width: 100%;
@@ -768,19 +716,20 @@ footer p{
    }
   
    #profile {
-     height: 100vh;
+     height: 100%;
    }
    #profile .wrapper,
    #profile .wrapper .container,{
    all: unset;
    }
    #profile .wrapper h3{
-     margin-bottom: 0px;
+     margin-bottom: 15px;
    }
    #profile .wrapper .container{
      display: grid;
      grid-template-columns: 1fr 1fr;
      grid-template-rows: 1fr;
+     grid-column-gap: 25px;
    }
    #profile .wrapper .container .personal-info {
      grid-column: 1 / 2;
@@ -794,6 +743,13 @@ footer p{
 }
 /*==================================[@media: 1140]==*/
 @media only screen and (min-width: 1140px) {
+   
+  #profile::before{
+  content: "";
+  display: block;
+  height: 65px;
+  margin: -30px 0 0;
+  }
   #navbar{
     grid-gap: 3rem;
   }
@@ -801,35 +757,99 @@ footer p{
     width: 83%;
   }
   #profile .wrapper .container .skills{
-    grid-gap: 0px;
-  
+    grid-gap: 5px;
   }
   .skill-item-1,
   .skill-item-2,
-  .skill-item-3{
-    justify-content: flex-end;
-    align-items: center;
+  .skill-item-3 {
+    padding-top: 85px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .skill-item-1 i,
+  .skill-item-2 i,
+  .skill-item-3 i{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .skill-item-1 br,
+  .skill-item-2 br,
+  .skill-item-3 br{
+    display: none;
   }
   .skill-item-4,
   .skill-item-5,
-  .skill-item-6{
-    justify-content: center;
-    align-items: center;
+  .skill-item-6 {
+    
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  .skill-item-7,
-  .skill-item-8,
-  .skill-item-9{
-    justify-content: flex-start;
+  .skill-item-4 i,
+  .skill-item-5 i,
+  .skill-item-6 i{
+    display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  .skill-item-4 br,
+  .skill-item-5 br,
+  .skill-item-6 br{
+    display: none;
   }
   .skill-item-5 > i{
-    font-size: 9.5em;
+    font-size: 11.5em;
   }
   .skill-item-4 > i,
   .skill-item-6 > i{
-    font-size: 5.5em;
+    font-size: 6.5em;
   }
   #contact .wrapper .container {
     width: 56%;
+  }
+}
+/*==================================[@media: 1380]==*/
+@media only screen and (min-width: 1380px) {
+  #welcome-section h1{
+    margin-top: 3em;
+  }
+  #welcome-section h1,
+  #welcome-section p{
+    margin-left: 25rem;
+    width: 900px;
+  }
+  .logo{
+    width: 70%;
+  }
+  
+  .photo img{
+    height: 300px;
+  }
+  #contact .wrapper .container {
+    width: 48%;
+  }
+}
+/*==================================[@media: 1800]==*/
+@media only screen and (min-width: 1800px) {
+  #projects::before{
+    content: "";
+    display: block;
+    height: 65px;
+    margin: -30px 0 0;
+    }
+  #navbar{
+    grid-gap: 8rem;
+  }
+  #profile .wrapper .container{
+    width: 75%;
+  }
+  #projects .wrapper .container{
+    grid-column-gap: 55px;
+  }
+  .hr2{
+    margin-top: 0px;
+  }
+  #contact .wrapper .container {
+    width: 45%;
   }
 }
